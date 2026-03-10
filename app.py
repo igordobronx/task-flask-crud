@@ -16,7 +16,7 @@ def create_task():
     task_id_control += 1
     tasks.append(new_task)
     print(tasks)
-    return jsonify({"mensagem": "tarefa criada com sucesso"}) #o servidor deve retornar json ou YAML
+    return jsonify({"mensagem": "tarefa criada com sucesso", "id": new_task.id}) #o servidor deve retornar json ou YAML
 
 @app.route('/tasks', methods=['GET'])
 def get_tasks():
